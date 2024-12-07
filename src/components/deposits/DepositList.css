@@ -1,0 +1,56 @@
+.deposit-list {
+  width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.deposit-list h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.deposit-items {
+  list-style: none;
+  padding: 0;
+}
+
+.deposit-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.deposit-item h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.deposit-item p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.deposit-item p:last-child {
+  margin-bottom: 0;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #007bff;
+}
+
+.error {
+  text-align: center;
+  font-size: 18px;
+  color: #ff0000;
+}
