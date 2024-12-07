@@ -23,10 +23,12 @@ export const Header = () => {
     <header className="header">
       <div className="header-tab">
         <img src={reactImg} className="header-logo" />
+        <div className="header-title-container">
+          <h1 className="header-title">Приложение банка</h1>
+          <p className="header-subtitle">Самые выгодные вклады!</p>
+        </div>
         <button onClick={logout} className="header-quit-button">Выход</button>
       </div>
-      <h1 className="header-title">Банковские вклады</h1>
-      <p className="header-subtitle">Добро пожаловать!</p>
     </header>
   )
 }

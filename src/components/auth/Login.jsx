@@ -28,7 +28,7 @@ export const Login = () => {
 
     setIsLoggedIn(true);
 
-    navigate(ROUTES.home);
+    navigate(ROUTES.depositList, { replace: true });
   };
 
   return (

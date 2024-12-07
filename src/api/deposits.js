@@ -7,18 +7,18 @@ export const getDeposits = async () => {
 export const addDeposit = async ({
   name, 
   bank, 
-  deposit_start_date, 
-  deposit_end_date, 
+  depositStartDate, 
+  depositEndDate, 
   percentage, 
-  deposits_category
+  depositsCategory
 }) => {
   return await apiInstance.post('/deposits/', {
     name,
     bank,
-    deposit_start_date,
-    deposit_end_date,
+    depositStartDate,
+    depositEndDate,
     percentage,
-    deposits_category
+    depositsCategory
   })
 }
 
@@ -29,23 +29,27 @@ export const getDeposit = async (id) => {
 export const updateDeposit = async (id, {
   name,
   bank,
-  deposit_start_date,
-  deposit_end_date,
+  depositStartDate,
+  depositEndDate,
   percentage,
-  deposits_category
+  depositsCategory
 }) => {
   return await apiInstance.put(`/deposits/${id}/`, {
     name,
     bank,
-    deposit_start_date,
-    deposit_end_date,
+    depositStartDate,
+    depositEndDate,
     percentage,
-    deposits_category
+    depositsCategory
   })
 }
 
 export const deleteDeposit = async (id) => {
   return await apiInstance.delete(`/deposits/${id}/`)
+}
+
+export const getCategories = async () => {
+  return await apiInstance.get('/deposits/categories/');
 }
 
 export const searchDeposits = async ({ name, bank }) => {

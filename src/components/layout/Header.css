@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   background-color: #1E1E1E; /* Темный фон */
-  padding: 20px;
+  padding: 20px 40px;
   border-bottom: 2px solid #424242; /* Линия снизу */
 }
 
@@ -25,6 +25,13 @@
   background-color: #64B5F6; /* Синий фон */
   color: #121212; /* Темный текст */
   font-size: 14px;
+}
+
+.header-title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-title {
