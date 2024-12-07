@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #121212; /* Темный фон */
+  flex: 1;
+}
+
+.main > * {
+  margin-bottom: 20px;
+}

@@ -1,0 +1,15 @@
+.footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1E1E1E;
+  padding: 10px 0;
+  border-top: 2px solid #424242;
+}
+
+.footer-caption {
+  font-family: 'Verdana', sans-serif;
+  font-size: 12px;
+  color: #BDBDBD; 
+}

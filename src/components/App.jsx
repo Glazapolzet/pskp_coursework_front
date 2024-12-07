@@ -24,10 +24,6 @@ const App = () => {
     .catch((err) => console.error(err));
   }, [])
 
-  // const logout = async () => {
-  //   await apiAuth.logout();
-  // }
-
   return (
     <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>
       <Routes>
