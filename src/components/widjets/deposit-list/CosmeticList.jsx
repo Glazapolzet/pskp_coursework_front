@@ -1,4 +1,4 @@
-import './DepositList.css';
+import './CosmeticList.css';
 
 import {
   useEffect,
@@ -8,9 +8,9 @@ import {
 import { apiDeposits } from '../../../api';
 import { SearchBar } from './SearchBar';
 import { Tabs } from './Tabs';
-import { UpdateDepositPopup } from './UpdateDepositPopup';
+import { UpdatePopup } from './UpdatePopup';
 
-export const DepositList = () => {
+export const CosmeticList = () => {
   const [deposits, setDeposits] = useState([]);
   const [categories, setCategories] = useState([]);
   const [activeCategory, setActiveCategory] = useState("all");
@@ -75,7 +75,7 @@ export const DepositList = () => {
 
   return (
     <div className="deposit-list">
-      <h2 className="deposit-list-title">Список вкладов</h2>
+      <h2 className="deposit-list-title">Перечень косметики</h2>
 
       <SearchBar searchTerm={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
 
@@ -118,14 +118,14 @@ export const DepositList = () => {
                 </div>
               ))
             ) : (
-              <div className="no-deposits">Нет вкладов для отображения.</div>
+              <div className="no-deposits">Косметика по данному запросу не найдена.</div>
             )}
           </div>
         </div>
       </div>
 
       {isEditing && (
-        <UpdateDepositPopup
+        <UpdatePopup
           deposit={currentDeposit}
           categories={categories}
           onClose={closeEditPopup}

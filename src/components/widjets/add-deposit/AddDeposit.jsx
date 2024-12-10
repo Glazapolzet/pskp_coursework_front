@@ -1,6 +1,11 @@
-import { useEffect, useState } from 'react';
-import { apiDeposits } from '../../../api';
 import './AddDeposit.css';
+
+import {
+  useEffect,
+  useState,
+} from 'react';
+
+import { apiDeposits } from '../../../api';
 
 export const AddDeposit = () => {
   const [formData, setFormData] = useState({
@@ -46,7 +51,7 @@ export const AddDeposit = () => {
 
     try {
       await apiDeposits.addDeposit(formData);
-      setSuccess('Депозит успешно добавлен!');
+      setSuccess('Новая косметика добавлена!');
       setFormData({
         name: '',
         bank: '',
@@ -57,17 +62,17 @@ export const AddDeposit = () => {
       });
     } catch (err) {
       console.error(err);
-      setError('Ошибка при добавлении депозита. Проверьте введенные данные.');
+      setError('Ошибка при добавлении косметики.');
     }
   };
 
   return (
     <div className="add-deposit">
-      <h2 className="add-deposit-title">Добавить новый вклад</h2>
+      <h2 className="add-deposit-title">Добавить косметику</h2>
       {error && <p className="add-deposit-error">{error}</p>}
       <form onSubmit={handleSubmit} className="add-deposit-form">
         <label className="add-deposit-label">
-          Название вклада:
+          Название:
           <input
             type="text"
             name="name"

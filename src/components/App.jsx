@@ -25,7 +25,7 @@ import { Home } from './pages';
 import { ProtectedRoute } from './shared';
 import {
   AddDeposit,
-  DepositList,
+  CosmeticList,
   Login,
   Register,
 } from './widjets';
@@ -70,7 +70,7 @@ const App = () => {
       <Routes>
         <Route element={<Layout />}>
           <Route path={ROUTES.home} element={<ProtectedRoute element={<Home />} />}>
-            <Route path={ROUTES.depositList} element={<DepositList />} />
+            <Route path={ROUTES.depositList} element={<CosmeticList />} />
             <Route path={ROUTES.addDeposit} element={<AddDeposit />} />
           </Route>
           <Route path={ROUTES.register} element={<Register />} />

@@ -14,20 +14,20 @@ export const Home = () => {
       <div className="home-panel">
         <img 
           src={cosmeticItems}
-          alt="Bank banner" 
+          alt="banner" 
           className="home-banner"
         />
         <div className="home-message">
-          <h1>Первым покупателям положена скидка 30%</h1>
+          <h1>Здесь вы найдете большой ассортимент косметики</h1>
         </div>
       </div>
-      <section className="deposits">
-        <div className="deposits-tab">
+      <section className="cosmetics">
+        <div className="cosmetics-tab">
           <NavLink to={ROUTES.depositList} className={({ isActive }) => isActive ? "active" : ""}>
-            Перечень вкладов
+            Перечень косметики
           </NavLink>
           <NavLink to={ROUTES.addDeposit} className={({ isActive }) => isActive ? "active" : ""}>
-            Создать вклад
+            Добавить косметику
           </NavLink>
         </div>
         <Outlet />

@@ -1,4 +1,4 @@
-.deposits {
+.cosmetics {
   margin: 0 auto;
   border-radius: 10px;
   color: #4B0082; /* Темный фиолетовый для текста */
@@ -34,7 +34,7 @@
   color: #4B0082; /* Основной темный цвет */
 }
 
-.deposits-tab {
+.cosmetics-tab {
   display: flex;
   column-gap: 20px;
   margin-bottom: 40px;
@@ -43,7 +43,7 @@
   border-radius: 5px;
 }
 
-.deposits-tab a {
+.cosmetics-tab a {
   font-family: 'Segoe UI', sans-serif;
   font-size: 16px;
   color: #FFFFFF; /* Белый цвет текста */
@@ -53,12 +53,12 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.deposits-tab a:hover {
+.cosmetics-tab a:hover {
   background-color: #FF69B3; /* Яркий розовый для эффекта наведения */
   color: #FFFFFF; /* Белый текст при наведении */
 }
 
-.deposits-tab a.active {
+.cosmetics-tab a.active {
   background-color: #FED700; /* Золотой цвет для активной вкладки */
   color: #4B0082; /* Темный фиолетовый текст для контраста */
 }

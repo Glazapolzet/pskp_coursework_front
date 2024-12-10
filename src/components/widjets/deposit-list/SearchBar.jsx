@@ -7,7 +7,7 @@ export const SearchBar = ({ searchTerm, onChange }) => {
     <div className="search-bar">
       <input
         type="text"
-        placeholder="Поиск по названию или банку"
+        placeholder="Поиск косметики"
         value={searchTerm}
         onChange={onChange}
       />

@@ -1,7 +1,8 @@
-import PropTypes from "prop-types";
-import "./UpdateDepositPopup.css";
+import './UpdatePopup.css';
 
-export const UpdateDepositPopup = ({
+import PropTypes from 'prop-types';
+
+export const UpdatePopup = ({
   deposit,
   categories,
   onClose,
@@ -13,7 +14,7 @@ export const UpdateDepositPopup = ({
   return (
     <div className="edit-popup">
       <div className="edit-popup-content">
-        <h3>Редактирование вклада</h3>
+        <h3>Редактировать данные</h3>
         <label>
           Название:
           <input
@@ -86,7 +87,7 @@ export const UpdateDepositPopup = ({
   );
 };
 
-UpdateDepositPopup.propTypes = {
+UpdatePopup.propTypes = {
   deposit: PropTypes.object,
   categories: PropTypes.array,
   onClose: PropTypes.func,
