@@ -7,31 +7,19 @@ import {
 
 import { apiDeposits } from '../../../api';
 import { SearchBar } from './SearchBar';
-import { Tabs } from './Tabs';
-import { UpdatePopup } from './UpdatePopup';
 
 export const CosmeticList = () => {
   const [deposits, setDeposits] = useState([]);
-  const [categories, setCategories] = useState([]);
-  const [activeCategory, setActiveCategory] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
   const [errorMessage, setErrorMessage] = useState(null); // Для сообщения об ошибке
-
-  const [isEditing, setIsEditing] = useState(false);
-  const [currentDeposit, setCurrentDeposit] = useState(null);
 
   useEffect(() => {
     const fetchDeposits = async () => {
       const response = await apiDeposits.getDeposits();
       setDeposits(response.data);
     };
-    const fetchCategories = async () => {
-      const response = await apiDeposits.getCategories();
-      setCategories(response.data.categories);
-    };
 
     fetchDeposits();
-    fetchCategories();
   }, []);
 
   const deleteDeposit = async (id) => {
@@ -48,35 +36,8 @@ export const CosmeticList = () => {
     }
   };
 
-  const openEditPopup = (deposit) => {
-    setCurrentDeposit(deposit);
-    setIsEditing(true);
-  };
-
-  const closeEditPopup = () => {
-    setIsEditing(false);
-    setCurrentDeposit(null);
-  };
-
-  const saveChanges = async () => {
-    try {
-      await apiDeposits.updateDeposit(currentDeposit.id, currentDeposit);
-      setDeposits((prev) =>
-        prev.map((deposit) =>
-          deposit.id === currentDeposit.id ? currentDeposit : deposit
-        )
-      );
-      closeEditPopup();
-    } catch (error) {
-      console.error("Failed to update deposit:", error);
-      setErrorMessage("У вас нет прав доступа к изменению данных");
-      closeEditPopup();
-    }
-  };
-
   const filteredDeposits = deposits.filter(
     (deposit) =>
-      (activeCategory === "all" || deposit.depositsCategory === activeCategory) &&
       (deposit.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         deposit.bank.toLowerCase().includes(searchTerm.toLowerCase()))
   );
@@ -85,16 +46,9 @@ export const CosmeticList = () => {
     <div className="deposit-list">
       <h2 className="deposit-list-title">Перечень косметики</h2>
 
-      {errorMessage && (
-        <div className="error-message">{errorMessage}</div>
-      )}
-
       <SearchBar searchTerm={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
 
       <div className="deposit-content">
-        <div className="categories-section">
-          <Tabs tabItems={categories} activeTab={activeCategory} setTab={setActiveCategory} />
-        </div>
         <div className="results-section">
           <div className="deposit-table">
             <div className="deposit-row deposit-header">
@@ -120,12 +74,6 @@ export const CosmeticList = () => {
                     >
                       Удалить
                     </button>
-                    <button
-                      className="edit-button"
-                      onClick={() => openEditPopup(deposit)}
-                    >
-                      Изменить
-                    </button>
                   </div>
                 </div>
               ))
@@ -134,17 +82,10 @@ export const CosmeticList = () => {
             )}
           </div>
         </div>
-      </div>
-
-      {isEditing && (
-        <UpdatePopup
-          deposit={currentDeposit}
-          categories={categories}
-          onClose={closeEditPopup}
-          onSave={saveChanges}
-          onChange={setCurrentDeposit}
-        />
+        {errorMessage && (
+        <div className="error-message">{errorMessage}</div>
       )}
+      </div>
     </div>
   );
 };

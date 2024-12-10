@@ -7,14 +7,11 @@
   width: 100%;
   padding: 10px;
   outline: none;
-  border: 1px solid #9470DC; /* Акцентный фиолетовый */
+  border: 1px solid #7e63b5; /* Акцентный фиолетовый */
   border-radius: 5px;
-  background-color: #E5E6FA; /* Светлый фон */
-  color: #4B0082; /* Основной цвет текста */
+  color: #7e63b5; /* Основной цвет текста */
 }
 
 .search-bar input:focus {
   outline: none;
-  border-color: #4B0082; /* Темный фиолетовый */
-  box-shadow: 0 0 4px #9470DC; /* Фиолетовый акцент */
 }

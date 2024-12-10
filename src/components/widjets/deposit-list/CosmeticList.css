@@ -6,7 +6,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Мягкая тень */
   box-sizing: border-box;
   max-width: 900px;
-  margin: 20px auto 0;
   font-family: 'Inter', sans-serif;
   color: #4B0082; /* Основной цвет текста */
   display: flex;
@@ -23,71 +22,69 @@
 }
 
 .error-message {
- color: #ff6c78;
+  color: #ff6c78; /* Красноватый оттенок для ошибок */
 }
 
 .deposit-content {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
 .categories-section {
-  background-color: #E5E6FA;
+  background-color: #E5E6FA; /* Светлый фиолетовый */
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Мягкая тень */
 }
 
-.results-section {
-}
+.results-section {}
 
 .no-deposits {
   padding: 20px;
   text-align: center;
-  color: #4B0082;
+  color: #4B0082; /* Основной цвет текста */
   background-color: #E5E6FA; /* Светлый фон */
   border-radius: 5px;
   margin-top: 10px;
 }
 
 .deposit-table {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: table;
+  width: 100%;
+  border-collapse: collapse; 
+  border: 1px solid #4B0082; 
+  background-color: #FFFFFF; 
+  border-radius: 10px;
 }
 
 .deposit-row {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr) 2fr;
-  align-items: center;
-  padding: 10px 15px;
-  background-color: #E5E6FA; /* Светлый фон для строк */
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
+  display: table-row;
 }
 
 .deposit-row > div {
-  display: flex;
-  justify-content: center;
+  display: table-cell;
   text-align: left;
-  padding: 5px 0;
-}
-
-.deposit-row:hover {
-  background-color: #FED700; /* Акцентный желтый при наведении */
+  padding: 10px;
+  border: 1px solid #4B0082; /* Границы ячеек */
+  font-size: 16px;
 }
 
 .deposit-header {
+  display: table-row;
   font-weight: bold;
   background-color: #9470DC; /* Фиолетовый фон заголовков */
-  color: #FFFFFF; /* Белый текст для заголовков */
+  color: #FFFFFF; /* Белый текст */
+}
+
+.deposit-header > div {
+  border: 1px solid #4B0082; /* Границы для заголовков */
 }
 
 .button-container {
   display: flex;
   column-gap: 10px;
+  justify-content: center;
 }
 
 .delete-button {

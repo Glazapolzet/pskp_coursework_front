@@ -17,7 +17,6 @@ import tokenHelper, { apiAuth } from '../api';
 import { AuthContext } from '../context/AuthContext';
 import { ROUTES } from '../shared/routesConfig';
 import {
-  Footer,
   Header,
   Main,
 } from './layout';
@@ -47,7 +46,6 @@ const Layout = () => {
     <>
         <Header logoutButton={<button onClick={logout} className="header-quit-button">Выход</button>} />
         <Main />
-        <Footer />
     </>
   )
 }
