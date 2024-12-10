@@ -28,16 +28,21 @@
   margin-bottom: 5px;
 }
 
-.form-field input {
+.form-field input,
+.form-field select {
+  width: 100%;
   padding: 10px;
-  font-size: 14px;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   border-radius: 4px;
-  outline: none;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
 }
 
-.form-field input:focus {
+.form-field input:focus,
+.form-field select:focus {
   border-color: #007bff;
+  outline: none;
 }
 
 .submit-btn {

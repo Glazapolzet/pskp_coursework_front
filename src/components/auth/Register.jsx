@@ -8,6 +8,7 @@ export const Register = () => {
   const [formData, setFormData] = useState({
     username: '',
     password: '',
+    role: 'user' // Предустановленная роль по умолчанию
   });
 
   const navigate = useNavigate();
@@ -52,6 +53,20 @@ export const Register = () => {
             onChange={handleInputChange}
             required
           />
+        </div>
+        <div className="form-field">
+          <label htmlFor="role">Роль</label>
+          <select
+            id="role"
+            name="role"
+            value={formData.role}
+            onChange={handleInputChange}
+            required
+          >
+            <option value="user">Пользователь</option>
+            <option value="manager">Менеджер</option>
+            <option value="admin">Администратор</option>
+          </select>
         </div>
         <button type="submit" className="submit-btn">
           Зарегистрироваться

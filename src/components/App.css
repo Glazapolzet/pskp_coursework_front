@@ -30,8 +30,3 @@ button {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
-button:hover {
-  background-color: #42A5F5; /* При наведении более яркий оттенок */
-  color: #FFFFFF;
-}

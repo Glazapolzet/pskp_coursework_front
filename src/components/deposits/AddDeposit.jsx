@@ -6,10 +6,10 @@ export const AddDeposit = () => {
   const [formData, setFormData] = useState({
     name: '',
     bank: '',
-    deposit_start_date: '',
-    deposit_end_date: '',
+    depositStartDate: '',
+    depositEndDate: '',
     percentage: '',
-    deposits_category: '',
+    depositsCategory: '',
   });
 
   const [categories, setCategories] = useState([]);
@@ -50,10 +50,10 @@ export const AddDeposit = () => {
       setFormData({
         name: '',
         bank: '',
-        deposit_start_date: '',
-        deposit_end_date: '',
+        depositStartDate: '',
+        depositEndDate: '',
         percentage: '',
-        deposits_category: '',
+        depositsCategory: '',
       });
     } catch (err) {
       console.error(err);
@@ -92,8 +92,8 @@ export const AddDeposit = () => {
           Дата начала вклада:
           <input
             type="date"
-            name="deposit_start_date"
-            value={formData.deposit_start_date}
+            name="depositStartDate"
+            value={formData.depositStartDate}
             onChange={handleChange}
             required
             className="add-deposit-input"
@@ -103,8 +103,8 @@ export const AddDeposit = () => {
           Дата окончания вклада:
           <input
             type="date"
-            name="deposit_end_date"
-            value={formData.deposit_end_date}
+            name="depositEndDate"
+            value={formData.depositEndDate}
             onChange={handleChange}
             required
             className="add-deposit-input"
@@ -125,8 +125,8 @@ export const AddDeposit = () => {
         <label className="add-deposit-label">
           Категория вклада:
           <select
-            name="deposits_category"
-            value={formData.deposits_category}
+            name="depositsCategory"
+            value={formData.depositsCategory}
             onChange={handleChange}
             required
             className="add-deposit-select"

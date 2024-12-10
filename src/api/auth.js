@@ -3,7 +3,7 @@ import { apiInstance, unauthApiInstance } from "./base";
 export const login = async ({ username, password }) => {
   const { data } = await unauthApiInstance.post('/auth/login/', {
     username,
-    password
+    password,
   });
 
   const { access, refresh } = data;
@@ -15,10 +15,11 @@ export const login = async ({ username, password }) => {
   return data;
 }
 
-export const register = async ({ username, password }) => {
+export const register = async ({ username, password, role }) => {
   const { data } = await unauthApiInstance.post('/auth/register/', {
     username,
     password,
+    role
   });
 
   const { access, refresh } = data;
