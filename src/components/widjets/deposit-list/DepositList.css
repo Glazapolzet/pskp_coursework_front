@@ -11,31 +11,6 @@
   color: #D3D3D3; /* Светло-серый для текста */
 }
 
-.category-tabs {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.category-tab {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #2b2b2b;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.category-tab.active {
-  background-color: #1e90ff;
-  color: #fff;
-}
-
-.category-tab:hover {
-  background-color: #1e1e1e;
-}
-
 .no-deposits {
   padding: 20px;
   text-align: center;

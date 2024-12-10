@@ -1,9 +1,9 @@
 import { NavLink, Outlet } from "react-router";
-import money from "../../assets/money.jpg";
-import { ROUTES } from "../../shared/routesConfig";
-import "./DepositsHome.css";
+import money from "../../../assets/money.jpg";
+import { ROUTES } from "../../../shared/routesConfig";
+import "./Home.css";
 
-export const DepositsHome = () => {
+export const Home = () => {
   return (
     <>
       <div className="home-panel">

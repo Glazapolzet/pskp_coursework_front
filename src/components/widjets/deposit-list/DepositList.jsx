@@ -1,8 +1,14 @@
-import { useEffect, useState } from "react";
-import { apiDeposits } from "../../../api";
-import "./DepositList.css";
-import { SearchBar } from "./SearchBar";
-import { UpdateDepositPopup } from "./UpdateDepositPopup";
+import './DepositList.css';
+
+import {
+  useEffect,
+  useState,
+} from 'react';
+
+import { apiDeposits } from '../../../api';
+import { SearchBar } from './SearchBar';
+import { Tabs } from './Tabs';
+import { UpdateDepositPopup } from './UpdateDepositPopup';
 
 export const DepositList = () => {
   const [deposits, setDeposits] = useState([]);
@@ -73,25 +79,7 @@ export const DepositList = () => {
 
       <SearchBar searchTerm={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
 
-      <div className="category-tabs">
-        <button
-          className={`category-tab ${activeCategory === "all" ? "active" : ""}`}
-          onClick={() => setActiveCategory("all")}
-        >
-          Все
-        </button>
-        {categories.map((category) => (
-          <button
-            key={category.key}
-            className={`category-tab ${
-              activeCategory === category.key ? "active" : ""
-            }`}
-            onClick={() => setActiveCategory(category.key)}
-          >
-            {category.name}
-          </button>
-        ))}
-      </div>
+      <Tabs tabItems={categories} activeTab={activeCategory} setTab={setActiveCategory} />
 
       <div className="deposit-table">
         <div className="deposit-row deposit-header">

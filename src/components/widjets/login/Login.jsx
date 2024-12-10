@@ -1,17 +1,24 @@
-import { useState } from "react";
-import { useNavigate } from "react-router";
-import { apiAuth } from "../../api";
-import { ROUTES } from "../../shared/routesConfig";
-import './Register.css';
+import './Login.css';
 
-export const Register = () => {
+import {
+  useContext,
+  useState,
+} from 'react';
+
+import { useNavigate } from 'react-router';
+
+import { apiAuth } from '../../../api';
+import { AuthContext } from '../../../context/AuthContext';
+import { ROUTES } from '../../../shared/routesConfig';
+
+export const Login = () => {
   const [formData, setFormData] = useState({
     username: '',
     password: '',
-    role: 'user' // Предустановленная роль по умолчанию
   });
 
   const navigate = useNavigate();
+  const { setIsLoggedIn } = useContext(AuthContext);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -23,14 +30,16 @@ export const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await apiAuth.register(formData);
+    await apiAuth.login(formData);
 
-    navigate(ROUTES.login);
+    setIsLoggedIn(true);
+
+    navigate(ROUTES.depositList, { replace: true });
   };
 
   return (
     <div className="auth-container">
-      <h2>Регистрация</h2>
+      <h2>Вход</h2>
       <form onSubmit={handleSubmit} className="auth-form">
         <div className="form-field">
           <label htmlFor="username">Имя пользователя</label>
@@ -54,26 +63,12 @@ export const Register = () => {
             required
           />
         </div>
-        <div className="form-field">
-          <label htmlFor="role">Роль</label>
-          <select
-            id="role"
-            name="role"
-            value={formData.role}
-            onChange={handleInputChange}
-            required
-          >
-            <option value="user">Пользователь</option>
-            <option value="manager">Менеджер</option>
-            <option value="admin">Администратор</option>
-          </select>
-        </div>
         <button type="submit" className="submit-btn">
-          Зарегистрироваться
+          Войти
         </button>
       </form>
-      <button onClick={() => navigate(ROUTES.login)} className="toggle-form-btn">
-        Уже зарегистрированы? Войти
+      <button onClick={() => navigate(ROUTES.register)} className="toggle-form-btn">
+        Нет аккаунта? Зарегистрироваться
       </button>
     </div>
   )

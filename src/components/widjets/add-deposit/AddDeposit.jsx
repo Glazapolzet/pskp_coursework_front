@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { apiDeposits } from '../../api';
+import { apiDeposits } from '../../../api';
 import './AddDeposit.css';
 
 export const AddDeposit = () => {

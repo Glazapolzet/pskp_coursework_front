@@ -1,5 +1,6 @@
-import PropTypes from "prop-types";
-import "./SearchBar.css";
+import './SearchBar.css';
+
+import PropTypes from 'prop-types';
 
 export const SearchBar = ({ searchTerm, onChange }) => {
   return (
