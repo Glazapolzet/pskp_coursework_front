@@ -17,13 +17,13 @@
 }
 
 .add-deposit-error {
-  color: #FF69B3; /* Розовый цвет для ошибок */
+  color: #ff6c78; /* Розовый цвет для ошибок */
   font-size: 14px;
   text-align: center;
 }
 
 .add-deposit-success {
-  color: #4CAF50; /* Зеленый цвет для успешных сообщений */
+  color: #6ddf70; /* Зеленый цвет для успешных сообщений */
   font-size: 14px;
   text-align: center;
 }

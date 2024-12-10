@@ -11,13 +11,26 @@ export const UpdatePopup = ({
 }) => {
   if (!deposit) return null;
 
+  const handleClose = (e) => {
+    e.preventDefault();
+
+    onClose();
+  }
+
+  const handleSave = (e) => {
+    e.preventDefault();
+
+    onSave();
+  }
+
   return (
     <div className="edit-popup">
-      <div className="edit-popup-content">
+      <form className="edit-popup-content" onSubmit={handleSave}>
         <h3>Редактировать данные</h3>
         <label>
           Название:
           <input
+            required
             type="text"
             value={deposit.name}
             onChange={(e) => onChange({ ...deposit, name: e.target.value })}
@@ -26,6 +39,7 @@ export const UpdatePopup = ({
         <label>
           Банк:
           <input
+            required
             type="text"
             value={deposit.bank}
             onChange={(e) => onChange({ ...deposit, bank: e.target.value })}
@@ -34,6 +48,7 @@ export const UpdatePopup = ({
         <label>
           Дата начала:
           <input
+            required
             type="date"
             value={deposit.depositStartDate}
             onChange={(e) =>
@@ -44,6 +59,7 @@ export const UpdatePopup = ({
         <label>
           Дата окончания:
           <input
+            required
             type="date"
             value={deposit.depositEndDate}
             onChange={(e) =>
@@ -54,6 +70,7 @@ export const UpdatePopup = ({
         <label>
           Процент:
           <input
+            required
             type="number"
             value={deposit.percentage}
             onChange={(e) =>
@@ -76,13 +93,13 @@ export const UpdatePopup = ({
             ))}
           </select>
         </label>
-        <button onClick={onSave} className="save-button">
+        <button className="save-button">
           Сохранить изменения
         </button>
-        <button onClick={onClose} className="cancel-button">
+        <button onClick={handleClose} className="cancel-button">
           Отмена
         </button>
-      </div>
+      </form>
     </div>
   );
 };

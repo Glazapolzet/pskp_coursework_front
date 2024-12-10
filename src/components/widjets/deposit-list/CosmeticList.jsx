@@ -15,6 +15,7 @@ export const CosmeticList = () => {
   const [categories, setCategories] = useState([]);
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
+  const [errorMessage, setErrorMessage] = useState(null); // Для сообщения об ошибке
 
   const [isEditing, setIsEditing] = useState(false);
   const [currentDeposit, setCurrentDeposit] = useState(null);
@@ -37,8 +38,13 @@ export const CosmeticList = () => {
     try {
       await apiDeposits.deleteDeposit(id);
       setDeposits(deposits.filter((deposit) => deposit.id !== id));
+      setErrorMessage(null); // Сбрасываем сообщение об ошибке
     } catch (error) {
-      console.error("Failed to delete deposit:", error);
+      if (error.response && error.response.status === 403) {
+        setErrorMessage("У вас нет прав доступа к операции удаления");
+      } else {
+        console.error("Failed to delete deposit:", error);
+      }
     }
   };
 
@@ -63,6 +69,8 @@ export const CosmeticList = () => {
       closeEditPopup();
     } catch (error) {
       console.error("Failed to update deposit:", error);
+      setErrorMessage("У вас нет прав доступа к изменению данных");
+      closeEditPopup();
     }
   };
 
@@ -76,6 +84,10 @@ export const CosmeticList = () => {
   return (
     <div className="deposit-list">
       <h2 className="deposit-list-title">Перечень косметики</h2>
+
+      {errorMessage && (
+        <div className="error-message">{errorMessage}</div>
+      )}
 
       <SearchBar searchTerm={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
 

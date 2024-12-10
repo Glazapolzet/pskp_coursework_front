@@ -22,6 +22,10 @@
   color: #9470DC; /* Акцентный фиолетовый */
 }
 
+.error-message {
+ color: #ff6c78;
+}
+
 .deposit-content {
   display: grid;
   grid-template-columns: 1fr 3fr;
