@@ -14,7 +14,7 @@
 
 /* Контейнер попапа */
 .edit-popup-content {
-  background-color: #fff;
+  background-color: #E5E6FA; /* Светлый фон для попапа */
   border-radius: 8px;
   padding: 20px;
   width: 400px;
@@ -40,7 +40,7 @@
 .edit-popup-content h3 {
   margin-top: 0;
   font-size: 1.5em;
-  color: #333;
+  color: #4B0082; /* Цвет заголовка изменен на основной цвет */
 }
 
 /* Метки (label) */
@@ -74,24 +74,24 @@
 }
 
 .save-button {
-  background-color: #4caf50;
+  background-color: #4B0082; /* Ваш основной цвет для кнопок */
   color: #fff;
   margin-right: 10px;
   transition: background-color 0.3s ease;
 }
 
 .save-button:hover {
-  background-color: #45a049;
+  background-color: #9470DC; /* Более светлый оттенок основного цвета при наведении */
 }
 
 .cancel-button {
-  background-color: #f44336;
+  background-color: #FF69B3; /* Розовый цвет для кнопок */
   color: #fff;
   transition: background-color 0.3s ease;
 }
 
 .cancel-button:hover {
-  background-color: #d32f2f;
+  background-color: #FED700; /* Жёлтый цвет при наведении */
 }
 
 /* Стили для адаптации на маленьких экранах */

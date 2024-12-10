@@ -10,8 +10,7 @@ export const Header = ({ logoutButton: LogoutButton }) => {
       <div className="header-tab">
         <img src={reactImg} className="header-logo" />
         <div className="header-title-container">
-          <h1 className="header-title">Приложение банка</h1>
-          <p className="header-subtitle">Самые выгодные вклады!</p>
+          <h1 className="header-title">💅 Магазин косметики 💅</h1>
         </div>
         {LogoutButton}
       </div>

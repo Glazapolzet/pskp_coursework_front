@@ -79,47 +79,51 @@ export const DepositList = () => {
 
       <SearchBar searchTerm={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
 
-      <Tabs tabItems={categories} activeTab={activeCategory} setTab={setActiveCategory} />
-
-      <div className="deposit-table">
-        <div className="deposit-row deposit-header">
-          <div>Название</div>
-          <div>Банк</div>
-          <div>Начало</div>
-          <div>Конец</div>
-          <div>Процент</div>
-          <div>Действия</div>
+      <div className="deposit-content">
+        <div className="categories-section">
+          <Tabs tabItems={categories} activeTab={activeCategory} setTab={setActiveCategory} />
         </div>
-        {filteredDeposits.length > 0 ? (
-          filteredDeposits.map((deposit) => (
-            <div className="deposit-row" key={deposit.id}>
-              <div>{deposit.name}</div>
-              <div>{deposit.bank}</div>
-              <div>{deposit.depositStartDate}</div>
-              <div>{deposit.depositEndDate}</div>
-              <div>{deposit.percentage}%</div>
-              <div className="button-container">
-                <button
-                  className="delete-button"
-                  onClick={() => deleteDeposit(deposit.id)}
-                >
-                  Удалить
-                </button>
-                <button
-                  className="edit-button"
-                  onClick={() => openEditPopup(deposit)}
-                >
-                  Изменить
-                </button>
-              </div>
+        <div className="results-section">
+          <div className="deposit-table">
+            <div className="deposit-row deposit-header">
+              <div>Название</div>
+              <div>Банк</div>
+              <div>Начало</div>
+              <div>Конец</div>
+              <div>Процент</div>
+              <div>Действия</div>
             </div>
-          ))
-        ) : (
-          <div className="no-deposits">Нет вкладов для отображения.</div>
-        )}
+            {filteredDeposits.length > 0 ? (
+              filteredDeposits.map((deposit) => (
+                <div className="deposit-row" key={deposit.id}>
+                  <div>{deposit.name}</div>
+                  <div>{deposit.bank}</div>
+                  <div>{deposit.depositStartDate}</div>
+                  <div>{deposit.depositEndDate}</div>
+                  <div>{deposit.percentage}%</div>
+                  <div className="button-container">
+                    <button
+                      className="delete-button"
+                      onClick={() => deleteDeposit(deposit.id)}
+                    >
+                      Удалить
+                    </button>
+                    <button
+                      className="edit-button"
+                      onClick={() => openEditPopup(deposit)}
+                    >
+                      Изменить
+                    </button>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <div className="no-deposits">Нет вкладов для отображения.</div>
+            )}
+          </div>
+        </div>
       </div>
 
-      {/* Попап редактирования */}
       {isEditing && (
         <UpdateDepositPopup
           deposit={currentDeposit}

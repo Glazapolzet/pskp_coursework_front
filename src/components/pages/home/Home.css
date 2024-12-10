@@ -1,22 +1,22 @@
 .deposits {
   margin: 0 auto;
   border-radius: 10px;
-  color: #E0E0E0;
+  color: #4B0082; /* Темный фиолетовый для текста */
 }
 
 .home-panel {
-  background-color: #252526;
+  background-color: #E5E6FA; /* Светлый фон для панели */
+  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
   margin-bottom: 30px;
+  overflow: hidden;
 }
 
 .home-banner {
   width: 100%;
   height: 350px;
   object-fit: cover;
-  border-bottom: 2px solid #333333;
+  border-bottom: 2px solid #9470DC; /* Светлый фиолетовый для нижней границы */
 }
 
 .home-message {
@@ -25,15 +25,13 @@
 }
 
 .home-message h1 {
-  font-family: 'Segoe UI', sans-serif;
   font-size: 28px;
-  color: #569CD6;
-  margin-bottom: 10px;
+  color: #4B0082; /* Основной темный цвет */
 }
 
 .home-message p {
   font-size: 16px;
-  margin-bottom: 15px;
+  color: #4B0082; /* Основной темный цвет */
 }
 
 .deposits-tab {
@@ -41,14 +39,14 @@
   column-gap: 20px;
   margin-bottom: 40px;
   padding: 10px 15px;
-  background-color: #2C2C2C;
+  background-color: #9470DC; /* Светлый фиолетовый фон */
   border-radius: 5px;
 }
 
 .deposits-tab a {
   font-family: 'Segoe UI', sans-serif;
   font-size: 16px;
-  color: #E0E0E0;
+  color: #FFFFFF; /* Белый цвет текста */
   text-decoration: none;
   padding: 10px 15px;
   border-radius: 5px;
@@ -56,11 +54,11 @@
 }
 
 .deposits-tab a:hover {
-  background-color: #4FC3F7;
-  color: #1E1E1E;
+  background-color: #FF69B3; /* Яркий розовый для эффекта наведения */
+  color: #FFFFFF; /* Белый текст при наведении */
 }
 
 .deposits-tab a.active {
-  background-color: #0288D1;
-  color: #FFFFFF;
+  background-color: #FED700; /* Золотой цвет для активной вкладки */
+  color: #4B0082; /* Темный фиолетовый текст для контраста */
 }

@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #1E1E1E; /* Темный фон */
+  background-color: #E5E6FA; /* Светлый фон */
   padding: 20px 40px;
-  border-bottom: 2px solid #424242; /* Линия снизу */
+  border-bottom: 2px solid #9470DC; /* Линия снизу в акцентном цвете */
 }
 
 .header-tab {
@@ -22,9 +22,19 @@
 }
 
 .header-quit-button {
-  background-color: #64B5F6; /* Синий фон */
-  color: #121212; /* Темный текст */
+  border: 1px solid #4B0082;
+  background-color: #FED700; /* Яркий фон кнопки */
+  color: #4B0082; /* Цвет текста */
   font-size: 14px;
+  border-radius: 12px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-quit-button:hover {
+  background-color: #FF69B3; /* Цвет кнопки при наведении */
+  color: #FFFFFF; /* Белый текст при наведении */
 }
 
 .header-title-container {
@@ -37,9 +47,10 @@
 .header-title {
   font-size: 24px;
   margin: 10px 0 0 0;
+  color: #4B0082; /* Основной цвет текста */
 }
 
 .header-subtitle {
   font-size: 16px;
-  color: #BDBDBD; /* Светло-серый */
+  color: #9470DC; /* Акцентный цвет подзаголовка */
 }

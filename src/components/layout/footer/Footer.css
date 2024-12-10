@@ -3,13 +3,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1E1E1E;
+  background-color: #E5E6FA; /* Светлый фон */
   padding: 10px 0;
-  border-top: 2px solid #424242;
+  border-top: 2px solid #9470DC; /* Верхняя граница в акцентном цвете */
 }
 
 .footer-caption {
-  font-family: 'Verdana', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 12px;
-  color: #BDBDBD; 
+  color: #4B0082; /* Основной цвет текста */
 }

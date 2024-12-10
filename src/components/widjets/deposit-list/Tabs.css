@@ -1,24 +1,28 @@
 .tabs {
   display: flex;
+  flex-direction: column;
   gap: 10px;
   margin-bottom: 20px;
+  background-color: #E5E6FA; /* Светлый фон для панели вкладок */
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .tab {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color: #2b2b2b;
+  background-color: #4B0082; /* Ваш основной цвет */
   color: #fff;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
 .tab.active {
-  background-color: #1e90ff;
+  background-color: #9470DC; /* Более светлый оттенок основного цвета для активной вкладки */
   color: #fff;
 }
 
 .tab:hover {
-  background-color: #1e1e1e;
+  background-color: #FED700; /* Жёлтый цвет при наведении */
 }

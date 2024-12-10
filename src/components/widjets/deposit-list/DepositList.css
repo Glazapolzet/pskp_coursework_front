@@ -1,32 +1,50 @@
 .deposit-list {
   min-width: 100%;
   padding: 20px;
-  background-color: #1E1E1E; /* Основной фон */
+  background-color: #FFFFFF; /* Светлый фон */
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Мягкая тень */
   box-sizing: border-box;
   max-width: 900px;
-  margin: 20px 0;
-  font-family: 'Verdana', sans-serif;
-  color: #D3D3D3; /* Светло-серый для текста */
+  margin: 20px auto 0;
+  font-family: 'Inter', sans-serif;
+  color: #4B0082; /* Основной цвет текста */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.deposit-list-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #9470DC; /* Акцентный фиолетовый */
+}
+
+.deposit-content {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+}
+
+.categories-section {
+  background-color: #E5E6FA;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.results-section {
 }
 
 .no-deposits {
   padding: 20px;
   text-align: center;
-  color: #fff;
-  background-color: #2b2b2b;
+  color: #4B0082;
+  background-color: #E5E6FA; /* Светлый фон */
   border-radius: 5px;
   margin-top: 10px;
-}
-
-
-.deposit-list-title {
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 24px;
-  margin-bottom: 20px;
-  text-align: center;
-  color: #64B5F6; /* Акцентный синий */
 }
 
 .deposit-table {
@@ -40,30 +58,27 @@
   grid-template-columns: repeat(5, 1fr) 2fr;
   align-items: center;
   padding: 10px 15px;
-  background-color: #252526; /* Темно-серый для строк */
+  background-color: #E5E6FA; /* Светлый фон для строк */
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
 }
 
 .deposit-row > div {
   display: flex;
   justify-content: center;
+  text-align: left;
+  padding: 5px 0;
 }
 
 .deposit-row:hover {
-  background-color: #333333; /* Более светлый оттенок при наведении */
+  background-color: #FED700; /* Акцентный желтый при наведении */
 }
 
 .deposit-header {
   font-weight: bold;
-  background-color: #2D2D2D; /* Фон заголовков */
-  color: #64B5F6; /* Синий текст для заголовков */
-}
-
-.deposit-row > div {
-  text-align: left;
-  padding: 5px 0;
+  background-color: #9470DC; /* Фиолетовый фон заголовков */
+  color: #FFFFFF; /* Белый текст для заголовков */
 }
 
 .button-container {
@@ -73,7 +88,7 @@
 
 .delete-button {
   padding: 8px 12px;
-  background-color: #E06C75; /* Красный для кнопки */
+  background-color: #FF69B3; /* Розовый для кнопки */
   color: #FFFFFF;
   font-size: 14px;
   border: none;
@@ -84,33 +99,36 @@
 }
 
 .delete-button:hover {
-  background-color: #C85A67; /* Темно-красный при наведении */
+  background-color: #E056A0; /* Темно-розовый при наведении */
 }
 
 .delete-button:active {
-  background-color: #A84752; /* Ещё темнее при нажатии */
+  background-color: #C0448C; /* Ещё темнее при нажатии */
 }
 
-/* Стили для кнопки "Изменить" */
 .edit-button {
-  background-color: #2196f3; /* Синий цвет */
-  color: #fff;
+  background-color: #9470DC; /* Фиолетовый цвет */
+  color: #FFFFFF;
   border: none;
-  border-radius: 4px; /* Закругленные углы */
+  border-radius: 4px;
   padding: 10px 15px;
   cursor: pointer;
   font-size: 1em;
   transition: background-color 0.3s ease;
 }
 
-/* Эффект наведения */
 .edit-button:hover {
-  background-color: #1976d2; /* Темный синий при наведении */
+  background-color: #4B0082; /* Темный фиолетовый при наведении */
 }
 
-/* Адаптивность */
+.footer-caption {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #4B0082; /* Основной цвет текста */
+}
+
 @media (max-width: 480px) {
   .edit-button {
-    width: 100%; /* Растянуть кнопку на маленьких экранах */
+    width: 100%;
   }
 }
