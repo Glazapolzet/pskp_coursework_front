@@ -2,7 +2,7 @@ import './Header.css';
 
 import PropTypes from 'prop-types';
 
-import reactImg from '../../../assets/avatarka-s-bukvoi-b-1.png';
+import reactImg from '../../../assets/logo.jpg';
 
 export const Header = ({ logoutButton: LogoutButton }) => {
   return (

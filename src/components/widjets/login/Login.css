@@ -39,13 +39,13 @@
 }
 
 .form-field input:focus {
-  border-color: #007bff;
+  border-color: #4B0081;
 }
 
 .submit-btn {
   padding: 12px;
   font-size: 16px;
-  background-color: #007bff;
+  background-color: #4B0081;
   color: white;
   border: none;
   border-radius: 4px;
@@ -54,7 +54,7 @@
 }
 
 .submit-btn:hover {
-  background-color: #0056b3;
+  background-color: #600c9c;
 }
 
 .toggle-form-btn {
@@ -62,7 +62,7 @@
   font-size: 14px;
   background: none;
   border: none;
-  color: #007bff;
+  color: #4B0081;
   cursor: pointer;
 }
 

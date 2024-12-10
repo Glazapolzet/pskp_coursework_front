@@ -17,8 +17,9 @@
 .header-logo {
   height: 50px;
   width: 50px;
-  border-radius: 50%;
+  border-radius: 20%;
   object-fit: cover;
+  object-position: center;
 }
 
 .header-quit-button {

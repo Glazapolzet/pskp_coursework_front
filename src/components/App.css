@@ -31,10 +31,4 @@ button {
   transition: background-color 0.3s ease;
   background-color: #FED700; /* Основной цвет кнопки */
   color: #4B0082; /* Цвет текста на кнопке */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-button:hover {
-  background-color: #FF69B3; /* Цвет кнопки при наведении */
-  color: #FFFFFF; /* Цвет текста на кнопке при наведении */
 }
