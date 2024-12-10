@@ -41,14 +41,14 @@
 
 .form-field input:focus,
 .form-field select:focus {
-  border-color: #007bff;
+  border-color: #32CD32; /* Зеленый оттенок */
   outline: none;
 }
 
 .submit-btn {
   padding: 12px;
   font-size: 16px;
-  background-color: #4B0081;
+  background-color: #32CD32; /* Новый зеленый цвет для кнопки */
   color: white;
   border: none;
   border-radius: 4px;
@@ -57,7 +57,7 @@
 }
 
 .submit-btn:hover {
-  background-color: #600b9c;
+  background-color: #2E8B57; /* Более тёмный зеленый оттенок при наведении */
 }
 
 .toggle-form-btn {

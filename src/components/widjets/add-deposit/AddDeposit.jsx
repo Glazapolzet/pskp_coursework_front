@@ -51,7 +51,7 @@ export const AddDeposit = () => {
 
     try {
       await apiDeposits.addDeposit(formData);
-      setSuccess('Новая косметика добавлена!');
+      setSuccess('Ваш вклад добавлен.');
       setFormData({
         name: '',
         bank: '',
@@ -62,13 +62,13 @@ export const AddDeposit = () => {
       });
     } catch (err) {
       console.error(err);
-      setError('Ошибка при добавлении косметики.');
+      setError('Ошибка при добавлении вклада.');
     }
   };
 
   return (
     <div className="add-deposit">
-      <h2 className="add-deposit-title">Добавить косметику</h2>
+      <h2 className="add-deposit-title">Добавить вклад</h2>
       {error && <p className="add-deposit-error">{error}</p>}
       <form onSubmit={handleSubmit} className="add-deposit-form">
         <label className="add-deposit-label">

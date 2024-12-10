@@ -1,17 +1,17 @@
 .add-deposit {
   padding: 20px;
   width: 50%;
-  margin: 0 auto;
-  background-color: #9470DC; /* Серединный светлый фиолетовый фон для блока */
+  margin: 0px auto;
+  background-color: #ffffff; /* Зеленый цвет для блока */
   border-radius: 10px;
-  color: #ffffff; /* Светлый цвет текста для контраста */
+  color: #000000; /* Черный цвет для текста */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .add-deposit-title {
   font-family: 'Segoe UI', sans-serif;
   font-size: 24px;
-  color: #ffffff; /* Светлый цвет для заголовка */
+  color: #000000; /* Светлый цвет для заголовка */
   text-align: center;
   margin-bottom: 20px;
 }
@@ -39,7 +39,7 @@
   flex-direction: column;
   font-family: 'Verdana', sans-serif;
   font-size: 14px;
-  color: #ffffff; /* Светлый цвет текста для меток */
+  color: #000000; /* Светлый цвет текста для меток */
 }
 
 .add-deposit-input,
@@ -49,14 +49,14 @@
   border: 1px solid #ccc; /* Светлый серый цвет для границ */
   border-radius: 5px;
   background-color: #FFFFFF; /* Белый цвет для полей ввода */
-  color: #9470DC; /* Темный цвет текста для контраста с фоном */
+  color: #32CD32; /* Темный цвет текста для контраста с фоном */
 }
 
 .add-deposit-input:focus,
 .add-deposit-select:focus {
   outline: none;
-  border-color: #9470DC; /* Более светлый оттенок основного цвета */
-  box-shadow: 0 0 4px #9470DC;
+  border-color: #32CD32; /* Более светлый оттенок основного цвета */
+  box-shadow: 0 0 4px #32CD32;
 }
 
 .add-deposit-button {
@@ -64,8 +64,8 @@
   padding: 15px;
   font-family: 'Segoe UI', sans-serif;
   font-size: 16px;
-  color: #FFFFFF;
-  background-color: #4B0081; /* Светло-синий цвет */
+  color: #ffffff;
+  background-color: #32CD32; /* Зеленый цвет для кнопки */
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -73,5 +73,5 @@
 }
 
 .add-deposit-button:hover {
-  background-color: #59148a; /* Более темный оттенок синего */
+  background-color: #2E8B57; /* Более темный зеленый оттенок при наведении */
 }

@@ -1,29 +1,28 @@
-.cosmetics {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  column-gap: 30px;
+.deposits {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
   margin: 0 auto;
   border-radius: 10px;
-  color: #4B0082; /* Темный фиолетовый для текста */
-  height: 630px;
+  color: #000000; /* Темный фиолетовый для текста */
 }
 
-.home-message {
+.deposits-message {
   padding: 20px;
   text-align: center;
 }
 
-.home-message h1 {
+.deposits-message h1 {
   font-size: 28px;
-  color: #4B0082; /* Основной темный цвет */
+  color: #000000; /* Основной темный цвет */
 }
 
-.home-message p {
+.deposits-message p {
   font-size: 16px;
-  color: #4B0082; /* Основной темный цвет */
+  color: #000000; /* Основной темный цвет */
 }
 
-.cosmetics-tab {
+.deposits-tab {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
@@ -33,23 +32,21 @@
   border-radius: 5px;
 }
 
-.cosmetics-tab a {
+.deposits-tab a {
   font-family: 'Segoe UI', sans-serif;
   font-size: 16px;
   color: #000000;
-  background-color: #c28de8;
+  background-color: #32CD32; /* Зеленый цвет для кнопки */
   text-decoration: none;
   padding: 10px 15px;
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.cosmetics-tab a:hover {
-  background-color: #FF69B3; 
-  color: #FFFFFF; 
+.deposits-tab a:hover {
+  background-color: #FDF663; 
 }
 
-.cosmetics-tab a.active {
-  background-color: #FF69B3; 
-  color: #fff; 
+.deposits-tab a.active {
+  background-color: #FDF663; 
 }

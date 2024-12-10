@@ -1,4 +1,4 @@
 export { AddDeposit } from './add-deposit/AddDeposit';
-export { CosmeticList } from './deposit-list/CosmeticList';
+export { DepositList as CosmeticList } from './deposit-list/DepositList';
 export { Login } from './login/Login';
 export { Register } from './register/Register';

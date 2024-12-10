@@ -11,7 +11,7 @@ export const Register = () => {
   const [formData, setFormData] = useState({
     username: '',
     password: '',
-    role: 'user' // Предустановленная роль по умолчанию
+    role: 'user'
   });
 
   const navigate = useNavigate();

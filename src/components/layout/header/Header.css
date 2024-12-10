@@ -54,3 +54,13 @@
   font-size: 16px;
   color: #9470DC; /* Акцентный цвет подзаголовка */
 }
+
+.header-quit-button {
+  background-color: #32CD32; /* Новый зеленый цвет для кнопки */
+  border: 1px solid #32CD32;
+}
+
+.header-quit-button:hover {
+  background-color: #1db91d; /* Более тёмный зеленый оттенок при наведении */
+  color: #ffffff;
+}

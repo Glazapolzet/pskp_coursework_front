@@ -1,4 +1,4 @@
-import './CosmeticList.css';
+import './DepositList.css';
 
 import {
   useEffect,
@@ -8,7 +8,7 @@ import {
 import { apiDeposits } from '../../../api';
 import { SearchBar } from './SearchBar';
 
-export const CosmeticList = () => {
+export const DepositList = () => {
   const [deposits, setDeposits] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [errorMessage, setErrorMessage] = useState(null); // Для сообщения об ошибке
@@ -29,7 +29,7 @@ export const CosmeticList = () => {
       setErrorMessage(null); // Сбрасываем сообщение об ошибке
     } catch (error) {
       if (error.response && error.response.status === 403) {
-        setErrorMessage("У вас нет прав доступа к операции удаления");
+        setErrorMessage("Вы не обладаете правами администратора для этой операции");
       } else {
         console.error("Failed to delete deposit:", error);
       }
@@ -44,9 +44,13 @@ export const CosmeticList = () => {
 
   return (
     <div className="deposit-list">
-      <h2 className="deposit-list-title">Перечень косметики</h2>
+      <h2 className="deposit-list-title">Список вкладов</h2>
 
       <SearchBar searchTerm={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+
+      {errorMessage && (
+        <div className="error-message">{errorMessage}</div>
+      )}
 
       <div className="deposit-content">
         <div className="results-section">
@@ -78,13 +82,10 @@ export const CosmeticList = () => {
                 </div>
               ))
             ) : (
-              <div className="no-deposits">Косметика по данному запросу не найдена.</div>
+              <div className="no-deposits">Ничего не найдено.</div>
             )}
           </div>
         </div>
-        {errorMessage && (
-        <div className="error-message">{errorMessage}</div>
-      )}
       </div>
     </div>
   );

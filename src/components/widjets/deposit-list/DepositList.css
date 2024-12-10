@@ -18,7 +18,7 @@
   font-size: 24px;
   margin-bottom: 20px;
   text-align: center;
-  color: #9470DC; /* Акцентный фиолетовый */
+  color: #32CD32; /* Зеленый */
 }
 
 .error-message {
@@ -43,7 +43,7 @@
 .no-deposits {
   padding: 20px;
   text-align: center;
-  color: #4B0082; /* Основной цвет текста */
+  color: #32CD32; /* Зеленый */
   background-color: #E5E6FA; /* Светлый фон */
   border-radius: 5px;
   margin-top: 10px;
@@ -52,10 +52,8 @@
 .deposit-table {
   display: table;
   width: 100%;
-  border-collapse: collapse; 
-  border: 1px solid #4B0082; 
-  background-color: #FFFFFF; 
-  border-radius: 10px;
+  border-collapse: collapse;
+  background-color: #fdf663; 
 }
 
 .deposit-row {
@@ -66,19 +64,14 @@
   display: table-cell;
   text-align: left;
   padding: 10px;
-  border: 1px solid #4B0082; /* Границы ячеек */
   font-size: 16px;
 }
 
 .deposit-header {
   display: table-row;
   font-weight: bold;
-  background-color: #9470DC; /* Фиолетовый фон заголовков */
+  background-color: #32CD32; /* Зеленый для заголовков таблицы */
   color: #FFFFFF; /* Белый текст */
-}
-
-.deposit-header > div {
-  border: 1px solid #4B0082; /* Границы для заголовков */
 }
 
 .button-container {
@@ -89,7 +82,7 @@
 
 .delete-button {
   padding: 8px 12px;
-  background-color: #FF69B3; /* Розовый для кнопки */
+  background-color: #cd3232; /* Новый зеленый цвет для кнопки */
   color: #FFFFFF;
   font-size: 14px;
   border: none;
@@ -100,15 +93,15 @@
 }
 
 .delete-button:hover {
-  background-color: #E056A0; /* Темно-розовый при наведении */
+  background-color: #f44655; /* Более тёмный зеленый оттенок при наведении */
 }
 
 .delete-button:active {
-  background-color: #C0448C; /* Ещё темнее при нажатии */
+  background-color: #d52d3b; /* Ещё темнее при нажатии */
 }
 
 .edit-button {
-  background-color: #9470DC; /* Фиолетовый цвет */
+  background-color: #32CD32; /* Зеленый цвет */
   color: #FFFFFF;
   border: none;
   border-radius: 4px;
@@ -119,7 +112,7 @@
 }
 
 .edit-button:hover {
-  background-color: #4B0082; /* Темный фиолетовый при наведении */
+  background-color: #2E8B57; /* Более тёмный зеленый оттенок при наведении */
 }
 
 .footer-caption {

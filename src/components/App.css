@@ -4,7 +4,7 @@
   flex-direction: column;
   margin: 0 auto;
   text-align: center;
-  color: #4B0082; /* Основной цвет текста */
+  color: #006400; /* Тёмно-зелёный основной цвет текста */
 }
 
 html, body {
@@ -12,12 +12,12 @@ html, body {
   padding: 0;
   height: 100%;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  color: #4B0082; /* Основной цвет текста */
-  background-color: #c2a5fc;
+  color: #006400; /* Тёмно-зелёный основной цвет текста */
+  background-color: #d0f0c0; /* Светло-зелёный фон */
 }
 
 h1, h2, h3 {
-  color: #9470DC; /* Акцентный цвет для заголовков */
+  color: #228B22; /* Лесной зелёный акцент для заголовков */
 }
 
 button {
@@ -27,6 +27,6 @@ button {
   padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  background-color: #FED700; /* Основной цвет кнопки */
-  color: #4B0082; /* Цвет текста на кнопке */
+  background-color: #32CD32; /* Лаймово-зелёный основной цвет кнопки */
+  color: #006400; /* Тёмно-зелёный цвет текста на кнопке */
 }
