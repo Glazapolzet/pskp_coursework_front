@@ -1,7 +1,12 @@
-import { NavLink, Outlet } from "react-router";
-import money from "../../../assets/money.jpg";
-import { ROUTES } from "../../../shared/routesConfig";
-import "./Home.css";
+import './Home.css';
+
+import {
+  NavLink,
+  Outlet,
+} from 'react-router';
+
+import money from '../../../assets/money.jpg';
+import { ROUTES } from '../../../shared/routesConfig';
 
 export const Home = () => {
   return (
@@ -24,6 +29,9 @@ export const Home = () => {
           </NavLink>
           <NavLink to={ROUTES.addDeposit} className={({ isActive }) => isActive ? "active" : ""}>
             Создать вклад
+          </NavLink>
+          <NavLink to={ROUTES.analytics} className={({ isActive }) => isActive ? "active" : ""}>
+            Аналитика
           </NavLink>
         </div>
         <Outlet />

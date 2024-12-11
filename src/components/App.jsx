@@ -25,6 +25,7 @@ import { Home } from './pages';
 import { ProtectedRoute } from './shared';
 import {
   AddDeposit,
+  Analytics,
   DepositList,
   Login,
   Register,
@@ -72,6 +73,7 @@ const App = () => {
           <Route path={ROUTES.home} element={<ProtectedRoute element={<Home />} />}>
             <Route path={ROUTES.depositList} element={<DepositList />} />
             <Route path={ROUTES.addDeposit} element={<AddDeposit />} />
+            <Route path={ROUTES.analytics} element={<Analytics />} />
           </Route>
           <Route path={ROUTES.register} element={<Register />} />
           <Route path={ROUTES.login} element={<Login />} />

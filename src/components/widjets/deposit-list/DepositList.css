@@ -20,6 +20,10 @@
   margin-top: 10px;
 }
 
+.error-message {
+  color: #ff6c78;
+  margin: 0 0 20px;
+}
 
 .deposit-list-title {
   font-family: 'Segoe UI', sans-serif;

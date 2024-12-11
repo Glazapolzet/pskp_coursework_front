@@ -19,6 +19,8 @@ export const DepositList = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [currentDeposit, setCurrentDeposit] = useState(null);
 
+  const [errorMessage, setErrorMessage] = useState(null);
+
   useEffect(() => {
     const fetchDeposits = async () => {
       const response = await apiDeposits.getDeposits();
@@ -38,7 +40,11 @@ export const DepositList = () => {
       await apiDeposits.deleteDeposit(id);
       setDeposits(deposits.filter((deposit) => deposit.id !== id));
     } catch (error) {
-      console.error("Failed to delete deposit:", error);
+      if (error.response && error.response.status === 403) {
+        setErrorMessage("У вас нет прав доступа к операции удаления");
+      } else {
+        console.error("Failed to delete deposit:", error);
+      }
     }
   };
 
@@ -62,6 +68,8 @@ export const DepositList = () => {
       );
       closeEditPopup();
     } catch (error) {
+      setErrorMessage("У вас нет прав доступа к изменению данных");
+      closeEditPopup();
       console.error("Failed to update deposit:", error);
     }
   };
@@ -78,6 +86,10 @@ export const DepositList = () => {
       <h2 className="deposit-list-title">Список вкладов</h2>
 
       <SearchBar searchTerm={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+
+      {errorMessage && (
+        <div className="error-message">{errorMessage}</div>
+      )}
 
       <Tabs tabItems={categories} activeTab={activeCategory} setTab={setActiveCategory} />
 
