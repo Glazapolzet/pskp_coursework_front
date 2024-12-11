@@ -67,7 +67,6 @@ export const Register = () => {
             required
           >
             <option value="user">Пользователь</option>
-            <option value="manager">Менеджер</option>
             <option value="admin">Администратор</option>
           </select>
         </div>
