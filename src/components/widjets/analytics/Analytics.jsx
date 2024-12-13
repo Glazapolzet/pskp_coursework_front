@@ -10,6 +10,7 @@ import {
   BarChart,
   CartesianGrid,
   Cell,
+  Legend,
   Pie,
   PieChart,
   ResponsiveContainer,
@@ -112,6 +113,7 @@ export const Analytics = () => {
               <XAxis dataKey="category" />
               <YAxis />
               <Tooltip />
+              <Legend />
               <Bar dataKey="percentage" fill="#82ca9d" />
             </BarChart>
           </ResponsiveContainer>

@@ -1,6 +1,11 @@
-import { useEffect, useState } from 'react';
-import { apiDeposits } from '../../../api';
 import './AddDeposit.css';
+
+import {
+  useEffect,
+  useState,
+} from 'react';
+
+import { apiDeposits } from '../../../api';
 
 export const AddDeposit = () => {
   const [formData, setFormData] = useState({
@@ -23,8 +28,8 @@ export const AddDeposit = () => {
         const response = await apiDeposits.getCategories();
         setCategories(response.data.categories);
       } catch (err) {
-        console.error("Ошибка при загрузке категорий:", err);
         setError('Не удалось загрузить категории.');
+        console.error(err);
       }
     };
 
@@ -56,8 +61,12 @@ export const AddDeposit = () => {
         depositsCategory: '',
       });
     } catch (err) {
-      console.error(err);
-      setError('Ошибка при добавлении депозита. Проверьте введенные данные.');
+      if (err.response && err.response.status === 403) {
+        setError("У вас нет прав доступа данной операции");
+      } else {
+        console.error(err);
+        setError('Ошибка при добавлении депозита. Проверьте введенные данные.');
+      }
     }
   };
 
