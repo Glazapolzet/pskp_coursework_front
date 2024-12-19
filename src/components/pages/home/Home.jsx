@@ -29,6 +29,9 @@ export const Home = () => {
           <NavLink to={ROUTES.addDeposit} className={({ isActive }) => isActive ? "active" : ""}>
             Добавить косметику
           </NavLink>
+          <NavLink to={ROUTES.analytics} className={({ isActive }) => isActive ? "active" : ""}>
+            Аналитика
+          </NavLink>
         </div>
         <Outlet />
       </section>

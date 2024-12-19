@@ -29,6 +29,7 @@ import {
   Login,
   Register,
 } from './widjets';
+import { Analytics } from './widjets/analytics/Analytics';
 
 const Layout = () => {
   const navigate = useNavigate();
@@ -72,6 +73,7 @@ const App = () => {
           <Route path={ROUTES.home} element={<ProtectedRoute element={<Home />} />}>
             <Route path={ROUTES.depositList} element={<CosmeticList />} />
             <Route path={ROUTES.addDeposit} element={<AddDeposit />} />
+            <Route path={ROUTES.analytics} element={<Analytics />} />
           </Route>
           <Route path={ROUTES.register} element={<Register />} />
           <Route path={ROUTES.login} element={<Login />} />

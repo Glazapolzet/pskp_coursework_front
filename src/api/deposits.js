@@ -1,7 +1,11 @@
-import { apiInstance } from "./base";
+import { apiInstance } from './base';
 
 export const getDeposits = async () => {
   return await apiInstance.get('/deposits/');
+}
+
+export const analytics = async () => {
+  return await apiInstance.post('/deposits/analytics/');
 }
 
 export const addDeposit = async ({
